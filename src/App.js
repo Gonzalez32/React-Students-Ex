@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+import Students from './components/Students'
 
 class App extends Component {
-  state = { [
+  state = { 
+    students: [
     {
       name: 'Cait Yomorta',
       bio: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus placeat nostrum explicabo? Voluptatibus expedita saepe officia optio, commodi totam ratione laudantium ipsum porro molestias, quasi nulla minus vitae laboriosam corrupti Delectus inventore explicabo est odit incidunt rem a recusandae eum pariatur. Aperiam doloremque blanditiis harum voluptate animi fugit beatae asperiores quo, dignissimos sed illum veniam eum accusantium nulla quod voluptatum',
@@ -67,8 +69,9 @@ class App extends Component {
 
   render() { 
     return ( 
-      <>
-      </>
+      <div className='App'>
+        <Students students={this.state.students} />
+      </div>
      );
   }
 }
